@@ -1,0 +1,31 @@
+{
+  "name": "antipodes/php-cs-fixer-config-antipodes",
+  "description": "Provides a configuration factory and multiple rule sets for Antipodes Medical.",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Théo Benoit",
+      "email": "theo@antipodesmultimedia.com"
+    }
+  ],
+  "homepage": "https://github.com/antipodes-medical/php-cs-fixer-config-antipodes",
+  "support": {
+    "issues": "https://github.com/antipodes-medical/php-cs-fixer-config-antipodes/issues",
+    "source": "https://github.com/antipodes-medical/php-cs-fixer-config-antipodes"
+  },
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "ext-filter": "*",
+    "friendsofphp/php-cs-fixer": "~3.7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Antipodes\\PhpCsFixer\\Config\\": "src"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
