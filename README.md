@@ -16,9 +16,12 @@ Create a configuration file `.php-cs-fixer.dist.php` in the root of your project
 
 ```php
 <?php
-use Antipodes\PhpCsFixer\Config;
 
-$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74());
+use PhpCsFixer\Finder;
+use Antipodes\PhpCsFixer\Config\Factory;
+use Antipodes\PhpCsFixer\Config\RuleSet\Php74;
+
+$config = Factory::fromRuleSet(new Php74());
 
 $finder = Finder::create()
                 ->in([
@@ -39,24 +42,14 @@ return $config
 :bulb: Optionally override rules from a rule set by passing in an array of rules to be merged in:
 
 ```diff
- <?php
- use Antipodes\PhpCsFixer\Config;
--$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74());
-+$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74(), [
-+    'mb_str_functions' => false,
-+    'strict_comparison' => false,
-+]);
- $config->getFinder()->in(__DIR__);
- $config->setCacheFile(__DIR__ . '/.build/php-cs-fixer/.php-cs-fixer.cache');
- return $config;
-```
-
-```diff
 <?php
-use Antipodes\PhpCsFixer\Config;
 
--$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74());
-+$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74(), [
+use PhpCsFixer\Finder;
+use Antipodes\PhpCsFixer\Config\Factory;
+use Antipodes\PhpCsFixer\Config\RuleSet\Php74;
+
+-$config = Factory::fromRuleSet(new Php74());
++$config = Factory::fromRuleSet(new Php74(), [
 +    'mb_str_functions' => false,
 +    'strict_comparison' => false,
 +]);
