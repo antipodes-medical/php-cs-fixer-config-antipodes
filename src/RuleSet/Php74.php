@@ -57,6 +57,7 @@ final class Php74 extends AbstractRuleSet implements ExplicitRuleSet
         'function_typehint_space'                     => true,
         'general_phpdoc_tag_rename'                   => true,
         'heredoc_to_nowdoc'                           => false,
+        'heredoc_indentation'                         => true,
         'include'                                     => true,
         'increment_style'                             => ['style' => 'post'],
         'indentation_type'                            => true,
